@@ -1,11 +1,15 @@
-:root {
-  --bg: #0b0f19;
-  --card: rgba(255, 255, 255, 0.05);
-  --border: rgba(255, 255, 255, 0.1);
-  --text: #e6edf3;
-  --muted: #9aa4b2;
-  --accent: #5b9cff;
-  --gradient: linear-gradient(120deg, #5b9cff, #7c4dff);
+:root{
+  --bg-main: #0b0f19;
+  --bg-secondary: #121826;
+  --card-bg: rgba(255,255,255,0.05);
+
+  --text-main: #e6e9f2;
+  --text-soft: #9aa4bf;
+
+  --accent: #7c5cff;
+  --accent-glow: rgba(124,92,255,0.4);
+
+  --border-soft: rgba(255,255,255,0.08);
 }
 
 * {
