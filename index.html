@@ -1,153 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a Machine Learning & Data Science specialist">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo">Portfolio</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Musharaf Hossen Bhuiyan</h1>
-      <p class="tagline">
-  <span id="typing-text"></span>
-  <span class="cursor">|</span>
-</p>
-      <p class="intro">
-        Building intelligent systems using data-driven models and real-world problem solving.
-      </p><br><br>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#" class="btn btn-outline">Download Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-
-    <div class="about-container">
-      <img src="Man1.jpg" width="25" height="25" alt="Profile Image" class="profile-img">
-
-      <div>
-        <p>
-          I am a Computer Science graduate specializing in
-          <span class="highlight">Web3 and Crypto</span>,
-          <span class="highlight">Data Analysis</span>,
-          <span class="highlight">Web Development</span> and
-          <span class="highlight">Power Bi</span>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Programming</h3>
-        <p>Python, JavaScript, SQL</p>
-      </div>
-
-      <div class="card">
-        <h3>Machine Learning & Data</h3>
-        <p>Scikit-learn, TensorFlow, Pandas, NumPy</p>
-      </div>
-
-      <div class="card">
-        <h3>Web & Tools</h3>
-        <p>HTML, CSS, Power Bi, Excel</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-      <div class="card project-card">
-        <h3>Inflation Forecasting</h3>
-        <p>Daily essential commodity price inflation forecasting.</p>
-        <div class="tags">
-          <span class="tag">ARIMA</span>
-          <span class="tag">LSTM</span>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Portfolio<span class="accent">.</span></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="https://github.com/Mhdipu12" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/mhdipu12" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://x.com/MusharafDipu" class="social-icon" aria-label="X (Twitter)" target="_blank">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2H21.5l-7.5 8.57L22 22h-6.844l-5.36-7.026L3.5 22H.244l8.034-9.185L2 2h6.844l4.86 6.377L18.244 2z"/>
+    </svg>
+             </a>
+                <a href="#" class="btn-resume" download>Resume</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <div class="card project-card">
-        <h3>ML Prediction System</h3>
-        <p>Supervised learning based predictive analytics.</p>
-        <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">ML</span>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <img src="Dipuu.gif" width="150" height="200" alt="Profile" class="hero-image">
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Musharaf Hossen Bhuiyan</span>
+                    </h1>
+                    <p class="hero-subtitle">Web3, Crypto & Data Science Enthusiasts</p>
+                    <p class="hero-description">
+                        Specializing in time series forecasting, predictive modeling and transforming complex data into actionable insights using LSTM, ARIMA and advanced ML techniques.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#" class="btn btn-secondary" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x600/1a1f3a/3b82f6?text=About+Image" alt="About Me">
+                </div>
+                <div class="about-text">
+                    <h3>Turning Data Into Intelligence</h3>
+                    <p>
+                        I'm a Computer Science graduate with a passion for <strong>Machine Learning</strong> and <strong>Data Science</strong>. My expertise lies in developing sophisticated models for time series forecasting, predictive analytics, and pattern recognition.
+                    </p>
+                    <p>
+                        Through hands-on experience with <strong>LSTM networks</strong>, <strong>ARIMA models</strong>, and various ML algorithms, I've successfully built solutions that drive data-driven decision making. My approach combines rigorous statistical analysis with modern deep learning techniques to solve complex real-world problems.
+                    </p>
+                    <p>
+                        I'm particularly interested in applications involving sequential data, anomaly detection, and building interpretable models that bridge the gap between technical complexity and business value.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>ML Models Deployed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Research Papers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+
+                <!-- ML & Data Science -->
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>ML & Data Science</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">LSTM</span>
+                        <span class="skill-tag">ARIMA</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Neural Networks</span>
+                    </div>
+                </div>
+
+                <!-- Data Analysis & Visualization -->
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Tableau</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="timeseries">Time Series</button>
+                <button class="filter-btn" data-filter="data">Data Analysis</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="timeseries ml">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1f3a/3b82f6?text=Stock+Price+Prediction" alt="Stock Price Prediction">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Stock Price Forecasting with LSTM</h3>
+                        <p>Deep learning model for predicting stock prices using historical data and technical indicators.</p>
+                        <div class="project-tags">
+                            <span class="tag">LSTM</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Time Series</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="timeseries ml">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1f3a/06b6d4?text=Sales+Forecasting" alt="Sales Forecasting">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sales Forecasting with ARIMA</h3>
+                        <p>Statistical model for accurate sales prediction using seasonal decomposition and ARIMA techniques.</p>
+                        <div class="project-tags">
+                            <span class="tag">ARIMA</span>
+                            <span class="tag">Statsmodels</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Forecasting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1f3a/8b5cf6?text=Sentiment+Analysis" alt="Sentiment Analysis">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Customer Sentiment Analysis</h3>
+                        <p>NLP-based model for analyzing customer reviews and extracting sentiment insights.</p>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">BERT</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Classification</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1f3a/ec4899?text=Data+Dashboard" alt="Analytics Dashboard">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="4">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Interactive Analytics Dashboard</h3>
+                        <p>Real-time data visualization dashboard for business intelligence and KPI tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Dash</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1f3a/f59e0b?text=Image+Classification" alt="Image Classification">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="5">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Image Classification CNN</h3>
+                        <p>Convolutional neural network for multi-class image classification with 95% accuracy.</p>
+                        <div class="project-tags">
+                            <span class="tag">CNN</span>
+                            <span class="tag">Keras</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1f3a/10b981?text=ML+Web+App" alt="ML Web Application">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="6">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ML Model Deployment Platform</h3>
+                        <p>Web application for deploying and serving machine learning models via REST API.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Experience</h2>
+            
+            <div class="timeline-container">
+                <!-- Education Timeline -->
+                <div class="timeline-section">
+                    <h3 class="timeline-heading">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2020 - 2024</span>
+                                <h4>Bachelor of Science in Computer Science</h4>
+                                <p class="timeline-institution">University Name</p>
+                                <p>Specialization in Machine Learning and Data Science. GPA: 3.8/4.0</p>
+                                <ul>
+                                    <li>Relevant Coursework: Machine Learning, Deep Learning, Data Mining, Statistical Analysis</li>
+                                    <li>Final Year Project: Stock Price Prediction using LSTM Networks</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024</span>
+                                <h4>Deep Learning Specialization</h4>
+                                <p class="timeline-institution">Coursera - DeepLearning.AI</p>
+                                <p>Comprehensive training in neural networks, CNN, RNN, and practical deep learning applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="timeline-section">
+                    <h3 class="timeline-heading">Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Jan 2024 - Present</span>
+                                <h4>Machine Learning Intern</h4>
+                                <p class="timeline-institution">Tech Company Name</p>
+                                <ul>
+                                    <li>Developed time series forecasting models achieving 92% accuracy</li>
+                                    <li>Implemented data pipelines for processing 1M+ records daily</li>
+                                    <li>Collaborated with cross-functional teams to deploy ML models to production</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Jun 2023 - Dec 2023</span>
+                                <h4>Data Science Research Assistant</h4>
+                                <p class="timeline-institution">University Research Lab</p>
+                                <ul>
+                                    <li>Conducted research on LSTM applications in financial forecasting</li>
+                                    <li>Published findings in university research journal</li>
+                                    <li>Developed predictive models for anomaly detection</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Jan 2023 - May 2023</span>
+                                <h4>Data Analyst Intern</h4>
+                                <p class="timeline-institution">Startup Name</p>
+                                <ul>
+                                    <li>Analyzed customer behavior data to drive business decisions</li>
+                                    <li>Created interactive dashboards using Tableau</li>
+                                    <li>Improved data processing efficiency by 40%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <div class="cert-slider">
+                <div class="cert-card">
+                    <div class="cert-icon">🏆</div>
+                    <h4>TensorFlow Developer Certificate</h4>
+                    <p>Google</p>
+                    <span class="cert-date">2024</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📊</div>
+                    <h4>Data Science Professional</h4>
+                    <p>IBM</p>
+                    <span class="cert-date">2023</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🤖</div>
+                    <h4>Machine Learning Specialization</h4>
+                    <p>Stanford Online</p>
+                    <span class="cert-date">2023</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">☁️</div>
+                    <h4>AWS ML Specialty</h4>
+                    <p>Amazon Web Services</p>
+                    <span class="cert-date">2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-subtitle">Interested in collaboration or have a project in mind? I'd love to hear from you.</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div>
+                            <h4>Email</h4>
+                            <p>musharafhossen710@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Chattogram, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <div>
+                            <h4>Connect</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/Mhdipu12" target="_blank" rel="noopener">GitHub</a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 Portfolio. All rights reserved.</p>
+                    <p class="footer-tech">Built By MH Dipu</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- EDUCATION -->
-  <section>
-    <h2>Education & Experience</h2>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>BSc in Computer Science and Engineering</h3>
-        <p>University of Science and Technology Chittagong(USTC) | 2022 – 2026</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>ML Research Project</h3>
-        <p>Time Series Forecasting </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-
-    <div class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button class="btn btn-primary">Send Message</button>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Built By MH Dipu © 2026</p>
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
